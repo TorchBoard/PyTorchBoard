@@ -2,10 +2,6 @@
 Clumsy TensorBoard copycat for PyTorch
 
 # Development setup
-Requirements:
-- Python 3.7.0
 
-```
-pip install -r requirements.txt
-pre-commit install
-```
+- Use Python `3.8.0`
+- Run setup script `./scripts/dev-setup`
