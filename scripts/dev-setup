@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Install dependencies
+
+pip install -r requirements/dev.txt
+
+# Install pre-commit hook
+
+pre-commit install
