@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+
+# Ensure we're in the right folder
+[ -d scripts ] || (echo "ERROR: Please run script from top folder" && exit 1)
+source scripts/helpers
+
+# Escape on failure
+set -eu
+
+log_info "Running tests"
+coverage run tests
+
+log_info "Coverage results"
+coverage report
+
+log_success "Done"

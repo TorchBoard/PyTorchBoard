@@ -1,9 +1,13 @@
 #!/bin/sh
 
-# Install dependencies
+# Ensure location
+[ -d torchboard ] || (echo "ERROR: Please run script from top folder" && exit 1)
+source scripts/helpers
 
+log_info "Installing dependencies"
 pip install -r requirements/dev.txt
 
-# Install pre-commit hook
-
+log_info "Installing \`pre-commit\`"
 pre-commit install
+
+log_success "Done"
