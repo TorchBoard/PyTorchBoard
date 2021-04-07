@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Ensure we're in the right folder
+[ -d scripts ] || (echo "ERROR: Please run script from top folder" && exit 1)
+source scripts/helpers
+
+log_info "Installing \`torchboard\` package"
+pip install .
+
+log_info "Verify package import"
+python -c "import torchboard"
+
+log_info "Uninstalling \`torchboard\` package"
+pip uninstall -y torchboard
+
+log_success "Done"

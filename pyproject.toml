@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools>=46.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.isort]
+profile = "black"
+src_paths = ["torchboard", "tests"]
+lines_after_imports = 2
+
+[tool.black]
+line-length = 80
