@@ -1,1 +1,1 @@
-from .api import TorchBoard
+from .writer import Writer
